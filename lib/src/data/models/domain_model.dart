@@ -2,15 +2,15 @@
 import 'dart:convert';
 
 class Domain {
-  String status;
-  String fqdn;
-  String publicationStatus;
-  String expiresAt;
+  String? status;
+  String? fqdn;
+  String? publicationStatus;
+  String? expiresAt;
   Domain({
-    required this.status,
-    required this.fqdn,
-    required this.publicationStatus,
-    required this.expiresAt,
+    this.status,
+    this.fqdn,
+    this.publicationStatus,
+    this.expiresAt,
   });
 
   Domain copyWith({
@@ -38,10 +38,10 @@ class Domain {
 
   factory Domain.fromMap(Map<String, dynamic> map) {
     return Domain(
-      status: map['status'],
-      fqdn: map['fqdn'],
-      publicationStatus: map['publicationStatus'],
-      expiresAt: map['expiresAt'],
+      status: map['status'] != null ? map['status'] as String : null,
+      fqdn: map['fqdn'] != null ? map['fqdn'] as String : null,
+      publicationStatus: map['publicationStatus'] != null ? map['publicationStatus'] as String : null,
+      expiresAt: map['expiresAt'] != null ? map['expiresAt'] as String : null,
     );
   }
 

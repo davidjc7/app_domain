@@ -1,3 +1,3 @@
 abstract class Env {
-  static const String baseUrl = "https://brasilapi.com.br";
+  static const String baseUrl = "https://brasilapi.com.br/api";
 }
